@@ -13,7 +13,7 @@ export default function AuthProvider(props) {
     try{
     axios({
         method:"post",
-        url:"http://localhost:5000/login",
+        url:`${import.meta.env.VITE_API_URL}/login`,
         data:formdata
     }).then((res)=>{
         if(res.data.status="success"){
